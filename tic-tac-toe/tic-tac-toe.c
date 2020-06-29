@@ -28,7 +28,6 @@ int main() {
 			printf("Enter the position where you would like to go as Row then Column\n");
 			scanf("%d", &playerRow);
 			scanf("%d", &playerCol);
-			printf("%d, %d\n\n", playerRow, playerCol);
 			if (board[playerRow][playerCol] == 0)
 			{
 				board[playerRow][playerCol] = player;
@@ -36,7 +35,7 @@ int main() {
 			}
 			else
 			{
-				printf("Invalid position, Try again");
+				printf("Invalid position, Try again\n");
 			}
 		}
 
@@ -96,7 +95,6 @@ int check_win(int board[3][3], int player) {
 	//diagonal check 2
 	for (int i = rows - 1, j = 0; i >= 0 && j < cols; i--, j++)
 	{
-		printf("%d, %d\n\n", i, j);
 		if (board[i][j] == player)
 			count++;
 		else
